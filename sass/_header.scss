@@ -1,0 +1,51 @@
+#header{
+   position: relative;
+   background-image: url('images/bg_header.jpg');
+   background-size: cover;
+   background-position: center center;
+   height: 80vh;
+   display: block;
+   z-index: 0;
+
+   &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.8;
+      z-index: -1;
+   }
+
+   /* Navbar Header
+      ========================================================================== */
+   .navbar-header{
+
+      .navbar-brand{
+         font-family: $font-brand;
+         color: #fff;
+         // font-weight: 700;
+         font-size: 3.2rem;
+         font-style: italic;
+      }
+   }
+
+   /* Navbar Style
+      ========================================================================== */
+   .navbar-nav{
+
+      a{
+         color: #fff;
+         text-transform: uppercase;
+         font-weight: 700;
+         letter-spacing: 0.5px;
+
+         &:hover{
+            background: transparent;
+         }
+      }
+   }
+
+}
