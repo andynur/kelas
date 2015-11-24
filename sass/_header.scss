@@ -1,4 +1,4 @@
-#header{
+#header {
    position: relative;
    background-image: url('images/bg_header.jpg');
    background-size: cover;
@@ -7,25 +7,29 @@
    display: block;
    z-index: 0;
 
-   &::after{
+   &::after {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
-      background: #000;
+      background: $black;
       opacity: 0.8;
       z-index: -1;
    }
 
    /* Navbar Header
       ========================================================================== */
-   .navbar-header{
+   .navbar {
+      padding-top: 30px;
+   }
 
-      .navbar-brand{
+   .navbar-header {
+
+      .navbar-brand {
          font-family: $font-brand;
-         color: #fff;
+         color: $white;
          // font-weight: 700;
          font-size: 3.2rem;
          font-style: italic;
@@ -34,17 +38,64 @@
 
    /* Navbar Style
       ========================================================================== */
-   .navbar-nav{
+   .navbar-nav {
 
-      a{
-         color: #fff;
+      a {
+         position: relative;
+         color: $white;
          text-transform: uppercase;
          font-weight: 700;
-         letter-spacing: 0.5px;
+         letter-spacing: 0.5px;         
 
-         &:hover{
+         &:hover, &:active, &:focus {
             background: transparent;
+            outline: 0;
+            
+            &::before {
+               width: 80%;
+            }
          }
+
+         &::before {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            width: 0;
+            height: 2px;
+            background-color: $white;
+            -webkit-transition: all ease 0.2s;
+            -o-transition: all ease 0.2s;
+            transition: all ease 0.2s;
+         }
+      }
+   }
+   
+   /* Style Hero Content
+      ========================================================================== */   
+   .header-content {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 45%;
+      margin: auto;
+      text-align: center;
+      color: $white;
+
+      &-title {
+         font-weight: bold;
+         font-size: 5rem;
+         margin: 0;
+      }
+
+      &-des {
+         margin: 0;
+         font-family: $font-brand;
+         font-style: italic;
       }
    }
 
